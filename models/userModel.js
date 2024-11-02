@@ -7,5 +7,7 @@ const userSchema = new mongoose.Schema({
   age: { type: Number, required: true }
 });
 
-const User = mongoose.model('User', userSchema);
+// Explicitly specify the collection name as 'users' to match the MongoDB collection name
+const User = mongoose.model('User', userSchema, 'users');
+
 module.exports = User;
